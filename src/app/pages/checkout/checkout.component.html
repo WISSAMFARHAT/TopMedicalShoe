@@ -1,0 +1,39 @@
+<!-- section tab title -->
+<app-tab currentValue="checkout" />
+
+
+<!-- checkout -->
+<section class="checkout">
+    <article>
+        <div class="checkout-input">
+            <div class="shipping">
+                <h3>Shipment Address</h3>
+                <div class="list">
+                    <input type="text" placeholder="Fist Name" spellcheck="false" class="--input">
+                    <input type="text" placeholder="Last Name" spellcheck="false" class="--input">
+                    <input type="text" placeholder="Phone" spellcheck="false" class="--input">
+                    <input type="text" placeholder="City" spellcheck="false" class="--input">
+                    <input type="text" placeholder="Street" spellcheck="false" class="--input">
+                    <input type="text" placeholder="Postal Code" spellcheck="false" class="--input">
+                    <input type="text" placeholder="Company (optional)" spellcheck="false" class="--input">
+                    <input type="text" placeholder="Email (optional)" spellcheck="false" class="--input">
+                    <textarea class="--input" placeholder="BUILDING NAME & MORE DETAILS (FLOOR, APARTMENT, OR OTHER REFERENCES)"></textarea>
+                    <textarea class="--input" placeholder="Write Some Notes (optional)"></textarea>
+                </div>
+            </div>
+            <div class="payment">
+                <h3>Payment Methode</h3>
+                <div class="list">
+                    <label>
+                        <div class="checkbox"><app-yesicon /></div>
+                        <input type="checkbox" hidden disabled checked>
+                        <span>Cash on delivery</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-proceed">
+            <app-invoice [isChekoutPage]="true" />
+        </div>
+    </article>
+</section>

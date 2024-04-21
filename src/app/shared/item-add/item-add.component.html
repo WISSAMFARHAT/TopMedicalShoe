@@ -1,0 +1,21 @@
+<div class="product">
+    <span>Item({{countItem}})</span>
+    <div class="product-list">
+        <div *ngFor="let i of [0, 1]" class="item">
+            <div class="item-img">
+                <img src="assets/img/item.jpg" alt="item image">
+            </div>
+            <div class="item-information">
+                <h3 class="title">TenTen- BabyGIRL -BOOTS</h3>
+                <p>Color: black</p>
+                <p>Size: 21</p>
+                <span class="price">34 $</span>
+                <div class="buttons">
+                    <button class="--button _black" *ngIf="!isCart"><app-bag/> <span>Cart</span></button>
+                    <input type="number" class="--input" min="1" max="3" *ngIf="isCart" value="1">
+                    <button class="--button _red"><app-close-icon/></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+.search article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+}
+
+.search article div{
+    position: relative;
+}
+
+.search article div .--input{
+    width: 100%;
+}
+
+.search article div ::ng-deep svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 20px;
+}
+
+.search article div ::ng-deep .--svg-fill{
+    fill:var(--blackColor)
+}
+
+.result{
+    margin-block: 50px;
+}
+
+.result article{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.result article p{
+    font-size: 1.5rem;
+    color:var(--blackColor);
+    text-align: center;
+}

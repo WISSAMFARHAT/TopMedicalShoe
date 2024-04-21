@@ -1,0 +1,23 @@
+<!-- section tab title -->
+<app-tab currentValue="whishlist" />
+
+
+<!-- whishlist count and display -->
+<section class="whishlist" *ngIf="!isEmpty()">
+    <article>
+        <app-item-add [isCart]="false" />
+    </article>
+</section>
+
+<!-- whishlist is empty -->
+<app-empty-page *ngIf="isEmpty()" />
+
+<!-- shop more section -->
+<section class="shop">
+    <article>
+        <h2>Shop <span>More</span></h2>
+        <div class="shop-list">
+            <app-item />
+        </div>
+    </article>
+</section>

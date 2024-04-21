@@ -1,0 +1,120 @@
+.items-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.--item{
+    width: 250px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.--item-discount{
+    position: relative;
+    /* left: 20px;
+    top: 20px; */
+    height: 30px;
+    width: 100px;
+    border-radius: var(--radius);
+    padding: 5px;
+    background-color: var(--redColor);
+    color:var(--whiteColor);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.--item-image{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.--item:not(._discount) .--item-image {
+   margin-top: 30px;
+}
+
+.--item-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.--item-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.--item-description .info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.--item-description .info p{
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-align: left;
+    color:var(--blackColor);
+}
+.--item-description .info span{
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: left;
+    color:var(--blackColor);
+}
+
+.--item-description .info span span{
+    font-size: 1rem;
+    top:-10px;
+    font-weight: 400;
+    color:var(--blackColor);
+    position: relative;
+}
+
+.--item-description .info span span::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--blackColor);
+}
+
+.--item-description .colors{
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+}
+
+
+.--item-description .colors span{
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--c);
+    box-shadow: 0 0 2px #000;
+}
+
+

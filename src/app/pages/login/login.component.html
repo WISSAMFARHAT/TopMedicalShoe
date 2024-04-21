@@ -1,0 +1,28 @@
+<!-- section title tab -->
+<app-tab currentValue="login" />
+
+<!-- section request -->
+
+<section class="request">
+    <article>
+        <div class="request-img">
+            <img src="assets/img/logo.png" alt="top medical shoes logo">
+        </div>
+        <div class="request-input">
+            <input type="text" class="--input" placeholder="Email">
+            <div class="password">
+                <input [type]="showPassword ? 'text' : 'password'" class="--input" placeholder="password">
+                <app-eye-icon  [showPassword]=showPassword (click)="toggleShowPassword()"/>
+            </div>
+        </div>
+        <div class="request-buttons">
+            <label>
+                <div class="checkbox"><app-yesicon /></div>
+                <input type="checkbox" hidden>
+                <span>Rember me</span>
+            </label>
+            <a href="/forget-password"><span>forget password</span></a>
+        </div>
+        <button class="--button _primary submit"><span>Login</span></button>
+    </article>
+</section>

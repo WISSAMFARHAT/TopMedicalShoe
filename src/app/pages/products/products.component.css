@@ -1,0 +1,241 @@
+
+.filter{
+    margin-block: 20px;
+}
+
+.filter article{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.filter-category{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+.filter-category svg{
+    width: 30px;
+    transition: all var(--duration);
+}
+
+.filter-category svg .--svg-fill{
+    fill:var(--blackColor);
+}
+
+.filter-category span{
+    font-size: 1rem;
+    color: var(--blackColor);
+    transition: all var(--duration);
+}
+
+.filter-category:hover svg, .filter-category:hover span{
+    opacity: .6;
+}
+
+.filter .--select{
+    background-color: transparent;
+    max-width: 300px;
+    border:1px solid var(--blackColor);
+    position: relative;
+    border-radius: var(--radius);
+}
+
+.filter .--select select{
+    width: 100%;
+    padding: 15px 20px;
+    padding-right: 35px;
+    background-color: transparent;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.filter .--select  ::ng-deep svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    pointer-events: none;
+}
+
+.filter .--select ::ng-deep .--svg-fill{
+    fill:var(--primaryColor)
+}
+    
+
+.products article{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.products-filter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.products-filter >div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.products-filter .title div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.products-filter .title div span{
+    font-size: 1.5rem;
+    color:var(--blackColor);
+    text-transform: capitalize;
+}
+
+.products-filter .title div button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: .8rem;
+    color:var(--redColor);
+    transition: all var(--duration);
+}
+
+.products-filter .title div button:hover{
+    opacity: .6;
+}
+
+
+.products-filter .title .list button{
+    outline: none;
+    background-color: var(--primaryColor);
+    border:1px solid var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: var(--radius);
+    padding: 5px;
+}
+
+.products-filter .title .list button span{
+    font-size: 1rem;
+    color:var(--whiteColor);
+    text-transform: capitalize;
+}
+
+.products-filter .filter {
+    margin-bottom: 0;
+}
+.products-filter .filter div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.products-filter .filter .title{
+    cursor: pointer;
+    align-items: center;
+}
+
+.products-filter .filter > div > span{
+    font-size: 1.5rem;
+    color:var(--blackColor);
+    text-transform: capitalize;
+}
+
+.products-filter .filter > div ::ng-deep svg
+{
+    width: 20px;
+    display: flex;
+}
+
+.products-filter .filter > div ::ng-deep .--svg-fill{
+    fill:var(--blackColor);
+}
+
+.products-filter .filter .list label{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.products-filter .filter .list label span{
+    font-size: 1rem;
+    color:var(--blackColor);
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.products-filter .filter .list label .checkbox{
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    border:1px solid var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration);
+}
+
+.products-filter .filter .list label .checkbox ::ng-deep svg{
+    width: 100%;
+}
+
+.products-filter .filter .list label .checkbox ::ng-deep .--svg-fill{
+    fill:var(--whiteColor);
+    transition: all var(--duration);
+}
+
+.products-filter .filter .list label:has(input:checked) .checkbox{
+    background-color: var(--primaryColor);
+}
+
+
+
+.products-filter .filter .price{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.products-filter .filter .price .--input{
+    min-width:120px;
+    width: 140px;
+}
+
+
+.products-filter .--button{
+    margin-top: 20px;
+}
+
+
+.products-list{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+

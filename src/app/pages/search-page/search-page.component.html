@@ -1,0 +1,24 @@
+<!-- tab name -->
+<app-tab currentValue="Search" />
+
+<!-- input section -->
+
+<section class="search">
+    <article>
+        <h2>How can we help?</h2>
+        <div>
+            <input type="text" class="--input" placeholder="Search By product">
+            <app-search />
+        </div>
+    </article>
+</section>
+
+<!-- result section -->
+
+<section class="result">
+    <article>
+        <p *ngIf=!hasResult>Ooops..., Result Not found!!</p>
+        <app-item *ngIf=hasResult />
+
+    </article>
+</section>

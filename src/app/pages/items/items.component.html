@@ -1,0 +1,115 @@
+<!-- tab title section -->
+<app-tab currentValue="TenTen-BabyGIRL-BOOTS" />
+
+<!-- product view -->
+<section class="product">
+    <article>
+        <div class="product-images">
+            <div class="hero">
+                <img src="assets/img/item.jpg" alt="item image">
+                <span>10%</span>
+            </div>
+            <div class="images">
+                <div>
+                    <img src="assets/img/item.jpg" alt="item image">
+                </div>
+                <div>
+                    <img src="assets/img/item.jpg" alt="item image">
+                </div>
+                <div>
+                    <img src="assets/img/item.jpg" alt="item image">
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="top">
+                <h2>TenTen-BabyGIRL-BOOTS</h2>
+                <span>5280149396621</span>
+            </div>
+            <div class="price _discount">
+                <span>30$</span>
+                <span>- 34$</span>
+            </div>
+
+            <div class="option">
+                <div class="option-size">
+                    <span>Sizes</span>
+                    <div class="--select">
+                        <select>
+                            <option selected>22</option>
+                            <option>22</option>
+                            <option>22</option>
+                            <option>22</option>
+                            <option>22</option>
+                            <option>22</option>
+                        </select>
+                        <app-arrowdown />
+                    </div>
+                   
+                </div>
+                <div class="option-color">
+                    <span>Colors</span>
+                   <div>
+                        <span style="--c:blue" class="active"><span></span></span>
+                        <span style="--c:white"><span></span></span>
+                        <span style="--c:red"><span></span></span>
+                        <span style="--c:green"><span></span></span>
+                   </div>
+                   
+                </div>
+            </div>
+
+            <div class="quantiter">
+                <span>Quantiter</span>
+                <input type="number" value="1" min="1" max="3">
+                <span class="stock">3 Pcs in stock</span>
+            </div>
+
+            <div class="description">
+                <p>Dear customer, please note that while some items may appear as out of stock online, you may still find them available in our local stores.</p>
+                <span>Estimated Delivery Time : 3-7 days
+                </span>
+            </div>
+
+            <div class="buttons">
+                <button class="--button _black">
+                    <app-bag />
+                    <span>Cart</span>
+                </button>
+                <button class="--button _whishlist">
+                    <app-whishlist-icon />
+                </button>
+            </div>
+            <div class="cashondelivery">
+                <img src="assets/img/cashondelivery.png" alt="cash on delivery image">
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<!-- product description -->
+<section class="description">
+    <article>
+        <div>
+            <h3>Product Details
+            </h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            </p>
+        </div>
+        <div>
+            <h3>Size Chart</h3>
+            <img src="assets/img/klin-size-guid.jpg" alt="size guid image">
+        </div>
+    </article>
+</section>
+
+<!-- related product -->
+<section class="list">
+    <article>
+        <h2>Related <span>Product</span></h2>
+        <div>
+            <app-item />
+        </div>
+    </article>
+</section>

@@ -1,0 +1,22 @@
+.empty{
+    margin-bottom: 50px;
+}
+
+.empty article{
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 1px #000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 300px;
+}
+
+.empty article p{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}

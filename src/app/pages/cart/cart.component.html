@@ -1,0 +1,32 @@
+<!-- section tab title -->
+<app-tab currentValue="cart" />
+
+<!-- section cart display -->
+<section class="cart" *ngIf="!isEmpty()">
+    <article>
+        <div class="cart-left">
+            <app-item-add [countItem]="countItem" [isCart]="true" />
+            <div class="information">
+                <h3>PURCHASE INFORMATION</h3>
+                <p>3 TO 7 BUSINESS DAYS TO DELIVER. CASH ON DELIVERY ONLY. READ LINK BELOW FOR MORE INFORMATION ABOUT OUR RETURN POLICY.</p>
+            </div>
+        </div>
+        <div class="cart-right">
+            <app-invoice />
+        </div>
+    </article>
+</section>
+
+<!-- section cart empty -->
+<app-empty-page [isCart]="true" *ngIf="isEmpty()" />
+
+
+<!-- shop more section -->
+<section class="shop">
+    <article>
+        <h2>Shop <span>More</span></h2>
+        <div class="shop-list">
+            <app-item />
+        </div>
+    </article>
+</section>

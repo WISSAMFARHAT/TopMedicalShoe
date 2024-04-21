@@ -1,0 +1,115 @@
+.checkout article{
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+
+.checkout-input{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.checkout-input > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-input h3{
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: normal;
+}
+
+.checkout-input .shipping .list,.checkout-input .payment .list{
+    display: grid;
+    padding: 20px;
+    box-shadow: 0 0 1px #000;
+    gap: 20px;
+    border-radius: var(--radius);
+    grid-template-columns: 1fr 1fr;
+}
+
+.checkout-input .shipping .list .--input{
+    width: 100%;
+}
+.--select{
+    background-color: transparent;
+    border: 1px solid var(--blackColor);
+    position: relative;
+    border-radius: var(--radius);
+    width: 100%;
+}
+
+.--select select{
+    padding: 12px 20px;
+    padding-right: 35px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.--select ::ng-deep svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    pointer-events: none;
+}
+
+textarea{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 200px;
+    resize: none;
+}
+
+
+
+label{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+label span{
+    font-size: 1rem;
+    color:var(--blackColor);
+    text-transform: capitalize;
+    user-select: none;
+}
+
+label .checkbox{
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    border:1px solid var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration);
+}
+
+label .checkbox ::ng-deep svg{
+    width: 100%;
+    display: flex;
+}
+
+label .checkbox ::ng-deep .--svg-fill{
+    fill:var(--whiteColor);
+    transition: all var(--duration);
+}
+
+label:has(input:checked) .checkbox{
+    background-color: var(--primaryColor);
+}

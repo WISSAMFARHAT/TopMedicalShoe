@@ -1,0 +1,37 @@
+<div class="invoice">
+    <div class="invoice-code" *ngIf="isChekoutPage">
+        <div class="input">
+            <input type="text" class="--input" placeholder="Enter Promo Code">
+            <button class="--button _black"><span>Submit</span></button>
+        </div>
+        <p class="note">Your Promo code is correct*</p>
+    </div>
+    <div class="invoice-display">
+        <div class="display">
+            <div class="display-subtotal">
+                <p>SubTotal</p>
+                <span>68 $</span>
+            </div>
+            <div class="display-info">
+                <div>
+                    <p>Shipping [Express Delivery]</p>
+                    <span>4.0 $</span>
+                </div>
+               <div>
+                <p>Tax [VAT]</p>
+                <span>2.47 $</span>
+               </div>
+            </div>
+            <div class="display-total">
+                <p>Total</p>
+                <span>74.47 $</span>
+            </div>
+            <span>TAXES INCLUDED*</span>
+        </div>
+        <div class="buttons">
+            <a href="/" class="--button _black"><span>Continue shopping</span></a>
+            <a href="/checkout" *ngIf="!isChekoutPage"  class="--button _primary"><span>Proceed Checkout</span></a>
+            <a href="order-confirmation" *ngIf="isChekoutPage"  class="--button _primary"><span>Proceed Payment</span></a>
+        </div>
+    </div>
+</div>

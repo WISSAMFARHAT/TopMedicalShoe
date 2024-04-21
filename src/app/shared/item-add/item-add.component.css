@@ -1,0 +1,123 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    max-width: 800px;
+    width: 100%;
+}
+
+.product >span{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-list{
+    width: 100%;
+    min-height: 300px;
+    box-shadow: 0 0 1px #000;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 10px 20px;
+}
+
+.product-list._empty{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.product-list._empty p{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+
+
+.product-list .item{
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 30px;
+border-bottom: 1px solid var(--greyColor);
+padding-block: 15px;
+}
+
+.product-list .item:last-child{
+    border-bottom: none;
+}
+
+.product-list .item-img{
+    max-width: 200px;
+    background-color: var(--whiteColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-list .item-img img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.product-list .item-information{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product-list .item-information p{
+    font-size: 1rem;
+}
+
+.product-list .item-information >span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.product-list .item-information .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+.product-list .item-information .buttons .--button{
+    padding: 10px;
+    min-width: 150px;
+}
+
+.product-list .item-information .buttons .--button._red{
+    background-color: transparent;
+    width: fit-content;
+    min-width: 50px;
+    border:none;
+}
+
+.product-list .item-information .buttons .--button._red ::ng-deep .--svg-fill{
+    fill:var(--redColor);
+    width: 30px;
+}
+.product-list .item-information .buttons .--button._red:hover{
+    opacity: .6;
+}
+
+.product-list .item-information .buttons .--input{
+    text-align: center;
+}
+
+
+.product-list .item-information .buttons .--button ::ng-deep svg{
+    width: 20px;
+}
+
+
+
+
+
+

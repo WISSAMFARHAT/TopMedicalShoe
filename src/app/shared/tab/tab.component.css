@@ -1,0 +1,23 @@
+.tab article{
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 10px;
+}
+
+.tab article a{
+    font-size: 1rem;
+    color: var(--blackColor);
+    text-transform:capitalize;
+    transition: all var(--duration);
+}
+
+.tab article a:hover{
+   opacity: .6;
+}
+
+.tab article span{
+    font-size: 1rem;
+    color: var(--redColor);
+    text-transform:capitalize;
+}

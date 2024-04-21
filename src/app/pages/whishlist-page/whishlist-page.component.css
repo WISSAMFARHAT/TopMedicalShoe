@@ -1,0 +1,37 @@
+.whishlist article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.whishlist article >*{
+    width: 100%;
+    margin-inline: auto;
+    max-width: 800px;
+}
+
+
+.shop{
+    border-top: 1px solid var(--primaryColor);
+}
+
+.shop article{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-block: 50px;
+}
+
+
+.shop-list{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}

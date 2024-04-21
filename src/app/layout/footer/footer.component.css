@@ -1,0 +1,115 @@
+.footer{
+    background-color: var(--primaryColor);
+}
+
+.footer article{
+    padding-block: 30px;
+}
+
+.footer article >div{
+ 
+}
+.footer-top{
+    gap: 30px 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-top div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 300px;
+}
+
+.footer-top div p{
+    font-size: 1.5rem;
+    color:var(--whiteColor);
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.footer-top div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.footer-top div ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-top div ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-block: 5px;
+}
+
+.footer-top div ul li a svg{
+    width: 30px;
+}
+
+.footer-top div ul li a span{
+    font-size: 1rem;
+    color:var(--whiteColor);
+}
+
+
+.footer-botton{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-top: 1px solid var(--whiteColor);
+    justify-content: center;
+    padding-top: 10px;
+    gap: 30px;
+    text-align: center;
+}
+
+
+.footer-botton span{
+    font-size: 1rem;
+    color:var(--whiteColor);
+
+}
+
+
+
+@media only screen and (min-width: 1000px){
+    .footer-top{
+        flex-wrap: nowrap;
+        text-align: left;
+        justify-content: space-between;
+    }
+    .footer-top div{
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .footer-top div ul li{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer-botton{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+}

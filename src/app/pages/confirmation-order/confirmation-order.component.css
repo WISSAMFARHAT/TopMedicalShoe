@@ -1,0 +1,52 @@
+.confirm {
+    margin-block: 50px;
+}
+.confirm article{
+    max-width: 800px;
+    width: 100%;
+    min-height: 300px;
+    padding: 50px 20px;
+    box-shadow: 0 0 1px #000;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.confirm-img{
+    max-width: 300px;
+    width: 100%;
+}
+
+.confirm-img img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.confirm-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.confirm-information > span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:var(--blackColor);
+}
+
+.confirm-information p{
+    font-size: 1rem;
+    color:var(--blackColor);
+}
+
+.confirm-information p span{
+    font-weight: bold;
+}
+

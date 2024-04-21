@@ -1,0 +1,127 @@
+.request{
+    margin-bottom: 50px;
+}
+
+.request >article{
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+    min-width: 300px;
+    box-shadow: 0 0 1px #000;
+    border-radius: var(--radius);
+    align-items: center;
+    justify-content: center;
+}
+
+.password{
+    position: relative;
+}
+
+.password ::ng-deep svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.password ::ng-deep .--svg-stroke{
+    stroke:var(--blackColor);
+}
+
+.request-img{
+    max-width: 300px;
+}
+
+.request-input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.--input{
+    width: 100%;
+}
+
+.request-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding-inline:10px ;
+}
+
+.request-buttons label{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.request-buttons label span{
+    font-size: .9rem;
+    color:var(--blackColor);
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.request-buttons label .checkbox{
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    border:1px solid var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration);
+}
+
+.request-buttons label .checkbox ::ng-deep svg{
+    width: 100%;
+    display: flex;
+}
+
+.request-buttons label .checkbox ::ng-deep .--svg-fill{
+    fill:var(--whiteColor);
+    transition: all var(--duration);
+}
+
+.request-buttons label:has(input:checked) .checkbox{
+    background-color: var(--primaryColor);
+}
+
+
+.request-buttons a span{
+    position: relative;
+    font-size:.9rem;
+    color:Var(--blackColor);
+    transition: all var(--duration);
+}
+
+.request-buttons a span:hover{
+    opacity: .6;
+}
+
+.request-buttons a span::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--blackColor);
+}
+
+.submit{
+    margin-top: 20px;
+    align-self: flex-end;
+    padding: 10px;
+}

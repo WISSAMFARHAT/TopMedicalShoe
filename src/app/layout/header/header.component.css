@@ -1,0 +1,125 @@
+.message{
+    background-color: var(--blackColor);
+    padding-block: 10px;
+}
+
+.message article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.message article p{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color:var(--whiteColor);
+}
+
+.header{
+    background-color: var(--whiteColor);
+    padding-block: 20px;
+    box-shadow: 0 0 1px #3232328e;
+}
+
+.header article{
+    display: flex;
+    flex-direction: column;
+}
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.header-top .logo{
+    max-width: 200px;
+    width: 100%;
+}
+
+.header-top .logo img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.header-top .icon{
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.header-top .icon li a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 25px;
+}
+.header-top .icon li a span{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--redColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color:var(--whiteColor);
+    top:-10px;
+    right: -10px;
+}
+
+.header-top .burger{
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    outline: none;
+    border:none;
+}
+
+.header-top .burger span{
+    width: 100%;
+    content: "";
+    height: 2px;
+    background-color: var(--blackColor);
+}
+
+.header-botton{
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-botton li a{
+    font-size: 1rem;
+    min-width: 100px;;
+    text-align: center;
+    color: var(--blackColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .header-top .icon{
+        display: flex;
+    }
+    .header-top .burger{
+        display: none;
+    }
+
+    .header-botton{
+        display: flex;
+    }
+}
