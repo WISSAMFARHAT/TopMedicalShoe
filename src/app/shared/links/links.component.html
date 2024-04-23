@@ -1,0 +1,35 @@
+<ul [ngClass]="!isMobile ? 'header-botton' : 'mobile-link'">
+    <li><a href="/">Home</a></li>
+    <li>
+        <button (click)="toggleSubMenu(0)">Baby <app-arrowdown *ngIf="isMobile"/></button>
+        <div class="submenu" [ngClass]="{'show': subMenus[0]}">
+            <a href="/products">Baby Boy</a>
+            <a href="/products">Baby Girl</a>
+        </div>
+    </li>
+    <li>
+        <button (click)="toggleSubMenu(1)">Boy <app-arrowdown *ngIf="isMobile"/></button>
+        <div class="submenu" [ngClass]="{'show': subMenus[1]}">
+            <a href="/products">Sandals</a>
+            <a href="/products">Shoes</a>
+            <a href="/products">Sneakers</a>
+            <a href="/products">Slipper</a>
+            <a href="/products">Snow Boots</a>
+            <a href="/products">Boot</a>
+            <a href="/products">Crocs</a>
+        </div>
+    </li>
+    <li>
+        <button (click)="toggleSubMenu(2)">Girl <app-arrowdown *ngIf="isMobile"/></button>
+        <div class="submenu" [ngClass]="{'show': subMenus[2]}">
+            <a href="/products">Sandals</a>
+            <a href="/products">Shoes</a>
+            <a href="/products">Sneakers</a>
+            <a href="/products">Slipper</a>
+            <a href="/products">Snow Boots</a>
+            <a href="/products">Boot</a>
+            <a href="/products">Crocs</a>
+        </div>
+    </li>
+    <li><a href="/track">Track</a></li>
+</ul>

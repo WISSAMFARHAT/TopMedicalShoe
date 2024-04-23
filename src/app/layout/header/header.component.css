@@ -61,6 +61,12 @@
     max-width: 25px;
    
 }
+.header-top .icon li a ::ng-deep .--svg-fill{
+    transition: all var(--duration);
+}
+.header-top .icon li a:hover ::ng-deep .--svg-fill{
+    fill:var(--redColor);
+}
 .header-top .icon li a span{
     position: absolute;
     content: "";
@@ -95,63 +101,78 @@
     background-color: var(--blackColor);
 }
 
-.header-botton{
+
+.mobile{
     display: none;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
+    position: fixed;
+    z-index: 999999999999999999;
+    background-color: #0000005e;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-.header-botton li a,.header-botton li button{
-    font-size: 1rem;
-    min-width: 100px;
-    text-align: center;
-    color: var(--blackColor);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    outline: none;
-    padding-top: 5px;
-    border:none;
-    padding-bottom: 20px;
-    cursor: pointer;
-    transition: all var(--duration);
-}
-
-.header-botton li a:hover,.header-botton li button:hover{
-    color:var(--redColor);
-}
-
-.header-botton li:hover > .submenu{
+::ng-deep .menuopen .mobile{
     display: block;
 }
 
-.header-botton li .submenu{
-    position: absolute;
-    bottom: auto;
+.mobile article{
+    max-width: 330px;
     width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    background-color: #fff;
-    z-index: 999;
-    box-shadow: 0 0 1px #000;
-    column-count: 2;
-    column-gap: 30px;
-    display: none;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--whiteColor);
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 40px 20px;
+    padding-top: 70px;
+    position: relative;
 }
 
-.header-botton li .submenu a{
-    font-size: 1rem;
-    transition:var(--duration);
-    color:var(--blackColor);
+.mobile-close{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration);
+}
+.mobile-close:hover{
+    opacity: .6;
 }
 
-.header-botton li .submenu a:hover{
-    color:var(--redColor);
+.mobile-close ::ng-deep svg{
+    width: 100%;
 }
+
+.mobile-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mobile-media ::ng-deep svg{
+    width: 30px;
+}
+
+.mobile-media ::ng-deep .--svg-fill{
+    fill:var(--blackColor);
+    transition: all var(--duration);
+}
+
+.mobile-media a:hover ::ng-deep .--svg-fill{
+    fill:var(--redColor);
+}
+
 
 @media only screen and (min-width: 1200px) {
 

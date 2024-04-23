@@ -28,46 +28,29 @@
                         </a>
                     </li>
                 </ul>
-                <div class="burger">
+                <div class="burger" (click)="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <ul class="header-botton">
-                <li><a href="/">Home</a></li>
-                <li>
-                    <button>Baby</button>
-                    <div class="submenu">
-                        <a href="/products">Baby Boy</a>
-                        <a href="/products">Baby Girl</a>
-                    </div>
-                </li>
-                <li>
-                    <button>Boy</button>
-                    <div class="submenu">
-                        <a href="/products">Sandals</a>
-                        <a href="/products">Shoes</a>
-                        <a href="/products">Sneakers</a>
-                        <a href="/products">Slipper</a>
-                        <a href="/products">Snow Boots</a>
-                        <a href="/products">Boot</a>
-                        <a href="/products">Crocs</a>
-                    </div>
-                </li>
-                <li>
-                    <button>Girl</button>
-                    <div class="submenu">
-                        <a href="/products">Sandals</a>
-                        <a href="/products">Shoes</a>
-                        <a href="/products">Sneakers</a>
-                        <a href="/products">Slipper</a>
-                        <a href="/products">Snow Boots</a>
-                        <a href="/products">Boot</a>
-                        <a href="/products">Crocs</a>
-                    </div>
-                </li>
-                <li><a href="/track">Track</a></li>
-            </ul>
+        <app-links />
     </article>
 </header>
+
+<aside class="mobile" (click)="toggleMobileMenu()">
+    <article (click)="$event.stopPropagation()">
+        <button class="mobile-close" (click)="toggleMobileMenu()">
+            <app-close-icon />
+        </button>
+        <a href="/" class="mobile-logo">
+            <img src="assets/img/logo.png" alt="top medical shoes logo">
+        </a>
+        <app-links [isMobile]="true" />
+        <ul class="mobile-media">
+            <li><a href="https://www.instagram.com/topmedicalshoes/?hl=en" target="_blank"><app-instagram /></a></li>
+            <li><a href="https://wa.me/+9611550207" target="_blank"><app-whatsapp /></a></li>
+            <li><a href="mailto:topmedicalshoeslbgmail.com" target="_blank"><app-email /></a></li>
+        </ul>
+    </article>
+</aside>

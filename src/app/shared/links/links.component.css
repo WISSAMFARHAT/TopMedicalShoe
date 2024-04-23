@@ -1,0 +1,156 @@
+.header-botton{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.header-botton ::ng-deep li a,.header-botton ::ng-deep li button{
+    font-size: 1rem;
+    min-width: 100px;
+    text-align: center;
+    color: var(--blackColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    outline: none;
+    padding-top: 5px;
+    border:none;
+    padding-bottom: 20px;
+    cursor: pointer;
+    transition: all var(--duration);
+}
+
+.header-botton ::ng-deep li a:hover,.header-botton ::ng-deep li button:hover{
+    color:var(--redColor);
+}
+
+.header-botton ::ng-deep li:hover > .submenu{
+    display: block;
+}
+
+.header-botton ::ng-deep li .submenu{
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 0 1px #000;
+    column-count: 2;
+    column-gap: 30px;
+    display: none;
+}
+
+.header-botton ::ng-deep li .submenu a{
+    font-size: 1rem;
+    transition:var(--duration);
+    color:var(--blackColor);
+}
+
+.header-botton ::ng-deep li .submenu a:hover{
+    color:var(--redColor);
+}
+
+
+/* for mobile */
+
+.mobile-link{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mobile-link >li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.mobile-link li a, .mobile-link li button{
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    border:none;
+    width: 100%;
+    padding-block: 5px;
+    font-size: 1.2rem;
+    color:var(--blackColor);
+    transition: all var(--duration);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.mobile-link li button{
+    margin-left: 10px;
+}
+.mobile-link li button ::ng-deep svg{
+    width: 20px;
+    position: relative;
+    top:5px;
+    fill:var(--blackColor);
+}
+
+.mobile-link li button:hover ::ng-deep svg{
+    fill:var(--redColor);
+}
+
+.mobile-link li a:hover,.mobile-link li button:hover{
+    color: var(--redColor);
+}
+
+
+
+.mobile-link li div{
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    padding-block: 10px;
+    display: flex;
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+    transition: all var(--duration);
+}
+.mobile-link li div.show  {
+    height: auto;
+    padding-block: 10px;
+    transition: all var(--duration);
+}
+
+.mobile-link li div a{
+    font-size: 1rem;
+    color:var(--blackColor);
+    transition: all var(--duration);
+    padding-block: 10px; 
+}
+
+.mobile-link li div a:hover{
+    color:var(--redColor);
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .header-botton{
+        display: flex;
+    }
+}
+
+

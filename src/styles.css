@@ -17,7 +17,9 @@
     --duration:.3s ease-in-out;
     --max-width:1200px;
 }
-
+*{
+    scroll-behavior: smooth;
+}
 
 body>header,
 body>footer {
@@ -347,4 +349,10 @@ h2{
     min-width: 150px;
     border-radius: var(--radius);
 }
+
+
+.menuopen body{
+    overflow-y: hidden;
+}
+
 

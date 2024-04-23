@@ -38,6 +38,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component';
 import { EyeIconComponent } from './assets/eye-icon/eye-icon.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { LinksComponent } from './shared/links/links.component';
+
 
 @NgModule({
   declarations: [
@@ -77,6 +79,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
     ForgetPasswordComponent,
     EyeIconComponent,
     SearchPageComponent,
+    LinksComponent,
   ],
   imports: [
     BrowserModule,

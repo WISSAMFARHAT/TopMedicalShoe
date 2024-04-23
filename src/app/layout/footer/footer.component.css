@@ -58,6 +58,7 @@
     padding-block: 5px;
 }
 
+
 .footer-top div ul li a svg{
     width: 30px;
 }
@@ -65,8 +66,20 @@
 .footer-top div ul li a span{
     font-size: 1rem;
     color:var(--whiteColor);
+    transition: all var(--duration);
+
+}
+.footer-top div ul li a ::ng-deep .--svg-fill
+{
+    transition: all var(--duration);
+}
+.footer-top div ul li a:hover ::ng-deep .--svg-fill{
+    fill: var(--redColor);
 }
 
+.footer-top div ul li a:hover span{
+    color: var(--redColor);
+}
 
 .footer-botton{
     display: flex;
