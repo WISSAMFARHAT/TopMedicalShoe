@@ -1,9 +1,9 @@
 .cart article{
     display: grid;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 50px;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.fr;
     gap: 40px;
 }
 
@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-width: 500px;
+    margin-inline: auto;
 }
 
 .cart-left .information{
@@ -53,4 +55,17 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+
+/* responsive desktop */
+@media only screen and (min-width: 1000px) {
+    .cart article{
+        grid-template-columns: 1.5fr 1fr;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .cart-left{
+        max-width: unset;
+    }
 }

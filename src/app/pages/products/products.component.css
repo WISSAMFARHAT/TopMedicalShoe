@@ -6,8 +6,11 @@
 .filter article{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
+    flex-direction: column;
+
 }
 
 .filter-category{
@@ -18,6 +21,7 @@
     outline: none;
     background-color: transparent;
     border: none;
+    width: 100%;
 }
 
 .filter-category svg{
@@ -41,7 +45,7 @@
 
 .filter .--select{
     background-color: transparent;
-    max-width: 300px;
+    width: 100%;
     border:1px solid var(--blackColor);
     position: relative;
     border-radius: var(--radius);
@@ -75,18 +79,62 @@
 
 .products article{
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 1fr;
     gap: 50px;
     padding-bottom: 50px;
+    transition: all var(--duration);
+    align-items: self-start;
+
 }
 
-.products-filter{
+
+.products .products-filter{
+    position: fixed;
+    background-color: #0000005e;
+    inset: 0;
+    height: 100vh;
+    z-index: 999999999999999;
+    width: 100vw;
+    display: none;
+}
+
+.products._open .products-filter{
+    display: block;
+}
+
+.products .products-filter >div{
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 300px;
+    background-color: var(--whiteColor);
+    overflow-y: auto;
+    height: 100vh;
 }
 
-.products-filter >div{
+
+.products .products-filter .close{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration);
+}
+
+.products .products-filter .close:hover{
+    opacity: .6;
+}
+
+
+.products-filter .filter{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -211,7 +259,6 @@
 }
 
 
-
 .products-filter .filter .price{
     display: flex;
     flex-wrap: wrap;
@@ -222,7 +269,9 @@
 
 .products-filter .filter .price .--input{
     min-width:120px;
-    width: 140px;
+    width: 100%;
+    max-width: 200px;
+
 }
 
 
@@ -239,3 +288,46 @@
     gap: 50px;
 }
 
+
+/* responsive tablet */
+@media only screen and (min-width: 500px) {
+    
+    .filter article{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .filter-category{
+        max-width: 100px;
+    }
+
+    .filter .--select{
+        max-width: 250px;
+    }
+}
+
+
+/* responsive desktop */
+@media only screen and (min-width: 1200px) {
+    .products .products-filter{
+        position: relative;
+        width: auto;
+        display: none;
+        height: auto;
+    }
+
+    .products .products-filter >div{
+        width: auto;
+        padding: 0;
+        height: auto;
+    }
+
+    .products .products-filter .close{
+        display: none;
+    }
+
+    .products._open  article{
+        grid-template-columns: 300px 1fr;
+    }
+    
+}

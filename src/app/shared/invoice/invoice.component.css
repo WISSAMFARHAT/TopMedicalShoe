@@ -4,6 +4,8 @@
     gap: 20px;
     width: 100%;
     margin-top: 30px;
+    max-width: 500px;
+    margin-inline: auto;
 }
 
 .invoice-code,.invoice-display .display{
@@ -86,10 +88,13 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
+.invoice-display .display .display-info > div span{
+    white-space: nowrap;
 
+}
 .invoice-display .display .display-info > div p,.invoice-display .display .display-info > div span{
     font-size: .9rem;
     color:var(--blackColor);
@@ -116,3 +121,8 @@
 
 
 
+@media only screen and (min-width: 1000px) {
+    .invoice{
+        max-width: 600px;
+    }
+}
